@@ -5,7 +5,7 @@
 4th Replace the **baseURL** in the api>tracker.js file with the new URL from **ngrok**
 
 
-
+====================
 ## Troubleshooting
 **Unable to connect to mongoDB**
 _Make sure that MondoDB still has your IP Address white listed_
@@ -13,3 +13,15 @@ _Make sure that MondoDB still has your IP Address white listed_
 _Ensure that you have replaced the URI with the new one from ngrok_
 **Tunnel service expired**
 _restart ngrok_
+
+
+=====================
+## README USage notes
+# Heading 1
+## Heading 2
+### Heading 3
+
+**Bold**
+_Italics_
+**Combining Bold with _Italic_**
+***All text Bold and Italic***
