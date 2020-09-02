@@ -16,7 +16,7 @@ _restart ngrok_
 
 
 =====================
-## README USage notes
+## README usage notes
 # Heading 1
 ## Heading 2
 ### Heading 3
