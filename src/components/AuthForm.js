@@ -41,6 +41,16 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         marginTop: 15
     },
+    title: {
+        textAlign: 'center',
+        color: 'dodgerblue',
+        marginTop: 20
+    },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        marginBottom: 200,
+    },
 })
 
 export default AuthForm;

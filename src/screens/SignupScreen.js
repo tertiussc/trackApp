@@ -35,15 +35,6 @@ SignupScreen.navigationOptions = () => {
 }
 
 const styles = StyleSheet.create({
-    title: {
-        textAlign: 'center',
-        color: 'dodgerblue'
-    },
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        marginBottom: 200,
-    },
 
 })
 
