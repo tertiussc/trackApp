@@ -1,3 +1,4 @@
+import '../_mockLocation'
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text, Button } from 'react-native-elements'
@@ -11,6 +12,7 @@ const TrackCreateScreen = () => {
     const startWatching = async () => {
         try {
             const { granted } = await requestPermissionsAsync();
+
             if (!granted) {
                 throw new Error('Location permission not granted');
             }
