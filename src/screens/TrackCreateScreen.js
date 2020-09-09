@@ -4,7 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import { Text, Button } from 'react-native-elements'
 import Map from '../components/Map'
 import { SafeAreaView } from 'react-navigation'
-import { requestPermissionsAsync } from 'expo-location'
+import { requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-location'
 
 const TrackCreateScreen = () => {
     const [err, setErr] = useState(null)
@@ -16,10 +16,18 @@ const TrackCreateScreen = () => {
             if (!granted) {
                 throw new Error('Location permission not granted');
             }
+            await watchPositionAsync({
+                accuracy: Accuracy.BestForNavigation,
+                timeInterval: 1000,
+                distanceInterval: 10
+            }, (location) => {
+                console.log(location)
+            })
         } catch (e) {
             setErr(e);
         }
     }
+
     useEffect(() => {
         startWatching()
     }, [])
