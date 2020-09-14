@@ -1,7 +1,7 @@
 // import '../_mockLocation'
 import React, { useContext } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Text, Button } from 'react-native-elements'
+import { Text } from 'react-native-elements'
 import Map from '../components/Map'
 import { SafeAreaView, withNavigationFocus } from 'react-navigation'
 import { Context as LocationContext } from '../context/LocationContext'

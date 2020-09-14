@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Button, Input } from 'react-native-elements'
 import Spacer from './Spacer'
 import { Context as LocationContext } from '../context/LocationContext'
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 
 
 const TrackForm = () => {
