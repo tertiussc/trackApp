@@ -10,8 +10,8 @@ const AccountScreen = () => {
 
     return (
         <SafeAreaView forceInset={{ top: 'always' }}>
-            <Text style={{ fontSize: 48 }}>Sign out Screen</Text>
             <Spacer>
+                <Text style={{ fontSize: 48, marginBottom: 20 }}>Sign out Screen</Text>
                 <Button title="Sign Out" onPress={signout} />
             </Spacer>
         </SafeAreaView>

@@ -24,7 +24,7 @@ const TrackForm = () => {
                 onChangeText={changeName}
             />
             {recording
-                ? <Button containerStyle={{ backgroundColor: "#dc143c", color: "#dc143c", }} title="Stop" onPress={stopRecording} />
+                ? <Button buttonStyle={{ backgroundColor: 'red' }} title="Stop Recording" onPress={stopRecording} />
                 : <Button title="Start Record" onPress={startRecording} />
             }
         </Spacer>

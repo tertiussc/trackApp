@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements'
+import Spacer from '../components/Spacer'
 
 const TrackListScreen = ({ navigation }) => {
     return (
-        <>
-            <Text style={{ fontSize: 48 }}>TrackListScreen</Text>
-            <Button title="go to track detail" onPress={() => navigation.navigate('TrackDetail')} />
-            <Text style={{ height: 2 }} />
-            <Button title="go to back to Singup" onPress={() => navigation.navigate('Signup')} />
-        </>
+        <Spacer>
+            <Text style={{ fontSize: 48, marginBottom: 20 }}>TrackListScreen</Text>
+            <Button title="Go to track detail" onPress={() => navigation.navigate('TrackDetail')} />
+        </Spacer>
     );
 }
 
