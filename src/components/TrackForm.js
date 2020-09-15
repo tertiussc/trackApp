@@ -3,6 +3,8 @@ import { StyleSheet } from 'react-native';
 import { Button, Input } from 'react-native-elements'
 import Spacer from './Spacer'
 import { Context as LocationContext } from '../context/LocationContext'
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 
 const TrackForm = () => {
@@ -24,8 +26,19 @@ const TrackForm = () => {
                 onChangeText={changeName}
             />
             {recording
-                ? <Button buttonStyle={{ backgroundColor: 'red' }} title="Stop Recording" onPress={stopRecording} />
-                : <Button title="Start Record" onPress={startRecording} />
+                ? <Button
+                    buttonStyle={{ backgroundColor: 'red' }}
+                    title=" Stop Recording" onPress={stopRecording}
+                    titleStyle={{ marginLeft: 10 }}
+                    icon={<Icon name="stop-circle" size={24} color="white" />}
+                />
+                : <Button
+                    buttonStyle={{ backgroundColor: 'green' }}
+                    title="Start Record"
+                    titleStyle={{ marginLeft: 10 }}
+                    onPress={startRecording}
+                    icon={<Icon name="play-circle-o" size={24} color="white" />}
+                />
             }
         </Spacer>
 
