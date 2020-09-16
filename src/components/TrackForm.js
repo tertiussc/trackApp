@@ -4,6 +4,7 @@ import { Button, Input } from 'react-native-elements'
 import Spacer from './Spacer'
 import { Context as LocationContext } from '../context/LocationContext'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import useSaveTrack from '../hooks/useSaveTrack'
 
 
 
@@ -13,7 +14,7 @@ const TrackForm = () => {
         stopRecording,
         changeName
     } = useContext(LocationContext)
-    console.log(locations.length)
+    const [saveTrack] = useSaveTrack()
 
     return (
         <Spacer>
@@ -39,6 +40,11 @@ const TrackForm = () => {
                     onPress={startRecording}
                     icon={<Icon name="play-circle-o" size={24} color="white" />}
                 />
+            }
+            {
+                !recording && locations.length
+                    ? <Button containerStyle={{ marginTop: 10 }} title="Save Track" onPress={saveTrack} />
+                    : null
             }
         </Spacer>
 
