@@ -4,15 +4,14 @@ import { ListItem } from 'react-native-elements'
 import Spacer from '../components/Spacer'
 import { NavigationEvents, navigationEvents } from 'react-navigation'
 import { Context as TrackContext } from '../context/TrackContext'
+import { FontAwesome } from '@expo/vector-icons';
 
 const TrackListScreen = ({ navigation }) => {
     const { state, fetchTracks } = useContext(TrackContext)
-    console.log(state)
     return (
         <>
             <NavigationEvents onWillFocus={fetchTracks} />
             <Spacer>
-                <Text style={{ fontSize: 48, marginBottom: 20 }}>TrackListScreen</Text>
                 <FlatList
                     data={state}
                     keyExtractor={item => item._id}
@@ -27,6 +26,10 @@ const TrackListScreen = ({ navigation }) => {
             </Spacer>
         </>
     );
+}
+
+TrackListScreen.navigationOptions = {
+    title: 'My Tracks'
 }
 
 const styles = StyleSheet.create({
